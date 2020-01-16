@@ -14,7 +14,7 @@
 *.pt
 *.TTF
 
-calligraphy/couplet/
+
 
 calligraphy/static/calligraphy/genimgs/
 calligraphy/zi2zi/ckpt/
