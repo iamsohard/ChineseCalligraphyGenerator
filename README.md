@@ -1,7 +1,7 @@
 # GoogleML-Calligraphy
 
 * [Overview](#overview)
-* [Our Calligraphy](#Our Calligraphy)
+* [OurCalligraphy](#OurCalligraphy)
 * [Result](#Result)
 * [Reference](#Reference)
 
@@ -9,7 +9,7 @@
 Picture Style-Transfer is a tough problem in Computer Vision, which attracts lots attention in the recent decade. Different with the previous Style-Transfer for scenery pictures, we focus more on the Style-Transfer for Chinese Calligraphy Words.
 
 ![alt network](assets/demo1.jpg)
-## Our Calligraphy
+## OurCalligraphy
 To solve the problem probably, we design a GAN-based model, which consists of two parts, a U-Net based Generator and a CNN-based Discriminator. 
 Moreover, to enable multi-style transfer, we concatenate the encoded feature with embedding of the target style, and feed the mixed feature into decoder.
 To enhanced the capability of generator in the in-domain dataset (etc. Lanting Jixu), we first train our model by adversarial learning in the out-domain dataset, which consist of nearly 50k Chinese Calligraphy pictures with different styles and fine-tune in a in-domain dataset.
