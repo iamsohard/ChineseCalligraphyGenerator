@@ -1,0 +1,153 @@
+# ignore this files#
+# 忽略所有视频
+*.mp4
+*.avi
+*__pycache__
+*.idea
+*.pyc
+*.zip
+*.ttf
+*.data-00000-of-00001
+*.so
+*.obj
+*.bin
+*.pt
+*.TTF
+calligraphy/zi2zi/
+calligraphy/couplet/
+
+calligraphy/static/calligraphy/genimgs/
+calligraphy/zi2zi/ckpt/
+calligraphy/zi2zi/datasets/
+calligraphy/zi2zi/.DS_Store
+calligraphy/zi2zi/.idea/
+calligraphy/zi2zi/paired_images/
+calligraphy/zi2zi/checkpoint/
+calligraphy/zi2zi/experiments/data/
+calligraphy/zi2zi/experiments/
+calligraphy/zi2zi/data/paired_images_finetune/
+calligraphy/zi2zi/data/paired_images/
+calligraphy/zi2zi/save_dir/
+calligraphy/zi2zi/handwriting_preparation/characters/
+calligraphy/zi2zi/chi_sim.traineddata
+calligraphy/zi2zi/osd.traineddata
+calligraphy/zi2zi/experiments_finetune/
+
+# Distribution / packaging
+.Python
+calligraphy/couplet/env/
+calligraphy/couplet/build/
+calligraphy/couplet/develop-eggs/
+calligraphy/couplet/dist/
+calligraphy/couplet/downloads/
+calligraphy/couplet/eggs/
+calligraphy/couplet/.eggs/
+calligraphy/couplet/lib/
+calligraphy/couplet/lib64/
+calligraphy/couplet/parts/
+calligraphy/couplet/sdist/
+calligraphy/couplet/var/
+calligraphy/couplet/wheels/
+*.egg-info/
+calligraphy/couplet/.installed.cfg
+*.egg
+
+# Checkpoints
+calligraphy/couplet/checkpoints
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+calligraphy/couplet/pip-log.txt
+calligraphy/couplet/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+calligraphy/couplet/nosetests.xml
+calligraphy/couplet/coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+calligraphy/couplet/local_settings.py
+
+# Flask stuff:
+calligraphy/couplet/instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+calligraphy/couplet/docs/_build/
+
+# PyBuilder
+calligraphy/couplet/target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+calligraphy/couplet/celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+calligraphy/couplet/venv/
+calligraphy/couplet/ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+calligraphy/couplet/site
+
+# mypy
+.mypy_cache/
+
+# Generated files
+calligraphy/couplet/fairseq/temporal_convolution_tbc
+calligraphy/couplet/fairseq/modules/*_layer/*_forward.cu
+calligraphy/couplet/fairseq/modules/*_layer/*_backward.cu
+
+# data
+calligraphy/couplet/data-bin/
+
+# reranking
+calligraphy/couplet/examples/reranking/rerank_data
+
+# Cython-generated C++ source files
+calligraphy/couplet/fairseq/data/data_utils_fast.cpp
+calligraphy/couplet/fairseq/data/token_block_utils_fast.cpp
+
+# VSCODE
+.vscode/ftp-sync.json
+.vscode/settings.json
+
+# Experimental Folder
+calligraphy/couplet/experimental/*

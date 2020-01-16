@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="{% static 'calligraphy/assets/img/favicon.ico' %}">
+      <title>书法生成</title>
+      <link rel="stylesheet" href="{% static 'calligraphy/css/jPages.css' %}" >
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'calligraphy/assets/css/bootstrap.css' %}" rel="stylesheet">
+ 	<link href="{% static 'calligraphy/assets/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'calligraphy/assets/js/jquery.min.js' %}"></script>
+    <!--[if lt IE 9]>
+      <script src="{% static 'calligraphy/assets/js/html5shiv.js' %}"></script>
+      <script src="{% static 'calligraphy/assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+  	<div id="navbar-main">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/calligraphy"><h1 style="font-size:25px;font-family:'华文行楷';">书法生成</h1></a>
+					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
+						<i class="el-icon-lines"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse" id="main-navigation">
+					<ul class="nav navbar-nav">
+						<li><a href="/calligraphy" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">首页</a></li>
+						<li><a href="/calligraphy/history" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">生成历史</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div id="" name="home" class="" style="height: 100px; min-height: 200px;">
+		<header class="clearfix " >
+  		</header>
+    </div>
+
+	<!--  CONTENT WRAPPER -->
+	<div id="content-wrapper"  style="width: 60%">
+		<section id="about" class="container page-section"  style="width: 90%">
+			<div class="row white">
+                <table  align="center" class="table table-striped" id="tb_videolist">
+                <caption style="text-align: center; font-weight: 900px; font-size:20px"><h1 class="fade-down centered section-title" style="font-size:25px;font-family:'华文行楷';">生成历史</h1></caption>
+                <thead>
+                    <tr style="background:#EAEAEA" >
+                    <th style="width:45px;text-align: center;font-size:20px;font-family:'华文行楷';" >编号</th>
+                    <th style="width:100px;text-align: center;font-size:20px;font-family:'华文行楷';">原文本</th>
+                    <th style="width:100px;text-align: center;font-size:20px;font-family:'华文行楷';">结果</th>
+                    <th style="width:80px;text-align: center;font-size:20px;font-family:'华文行楷';">时间</th>
+                    <th style="width:50px;text-align: center;font-size:20px;font-family:'华文行楷';">操作</th>
+                    </tr>
+                </thead>
+                <tbody id = "itemContainer">
+                {% for history in historys %}
+                <tr>
+                    <td style="text-align: center;display: table-cell; vertical-align: middle;" id={{history.history_id}}  >{{history.history_id}}</td>
+                    <td style="text-align: center">
+                        {{history.content}}
+                    </td>
+                    <td style="text-align: center">
+                        {% if history.info == "couplet" %}
+                            <img src="../../{{history.calligraphy}}" width="100px" height="100px">
+                        {% else %}
+                            <img src="../../{{history.calligraphy}}" width="100px" height="100px">
+                        {% endif %}
+                        <!--<img src="../../{{history.calligraphy}}" width="100px" height="100px">-->
+                         <!--{{history.calligraphy}}-->
+                    </td>
+                    <td style="text-align: center;display: table-cell; vertical-align: middle; " name="timeStamp">
+                        {{history.timeStamp}}
+                    </td>
+
+                    <td style="text-align: center;display: table-cell; vertical-align: middle;  ">
+                        <input type="button" value="查看" onclick="check_txt({{history.history_id}})" class="btn btn-primary" style="margin-bottom:5px;"/>
+                        <input type="button" value="删除" onclick="delete_txt({{history.history_id}})" class="btn btn-danger" style="margin-bottom:5px;" />
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+			</div>
+
+
+		</section>
+        <section class="container page-section">
+            <div><div class="holder" style="margin:auto; width: 400px"></div></div>
+        </section>
+
+	</div>
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'calligraphy/assets/js/plugins.js' %}"></script>
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/init.js' %}"></script>
+    <script type="text/javascript" src="{% static 'calligraphy/js/jPages.min.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			'use strict';
+			  jQuery('body').backstretch([
+				  // "{% static 'calligraphy/assets/img/bg/bg1.jpg' %}"
+				 "{% static 'calligraphy/assets/img/bg/bg2.jpg' %}"
+				, "{% static 'calligraphy/assets/img/bg/bg3.jpg' %}"
+			  ], {duration: 5000, fade: 500});
+			});
+
+		$(function(){
+            $("div.holder").jPages({
+              containerID : "itemContainer",
+              first: " 首页 ",
+              last: " 尾页 ",
+              previous : " 上页 ",
+              next : " 下页 ",
+              perPage : 5,
+              delay : 10
+            });
+        });
+
+		function check_txt(txt_id){
+            newurl = '/calligraphy/'+txt_id;
+            window.location.href = newurl;
+        }
+
+        function delete_txt(txt_id){
+            alert("真的删除?");
+            window.location.href = '/calligraphy/'+txt_id+'/delete';
+        }
+
+	</script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'long_fakenews_detection/css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							 <a href="#">Link</a>
+						</li>
+						<li>
+							 <a href="#">Link</a>
+						</li>
+                        <li>
+							 <a href="#">Link</a>
+						</li>
+					</ul>
+				</div>
+
+			</nav>
+			<div class="jumbotron">
+				<h1>
+					长文本谣言检测系统
+				</h1>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					 <a class="btn btn-primary btn-large" href="#">了解更多</a>
+				</p>
+			</div>
+
+            <form class="form-01__form"   >
+                <div class="form__item" style="padding:0;width: 100%">
+                    <textarea rows="5" name="news_content" value="请输入新闻内容" id= "news_content"  style="padding:0;line-height:30px;width: 100%" placeholder="示例： #2016里约奥运#【此刻，一起传递！为中国女排！我们是冠！军！转】里约奥运会女排决赛，中国3-1战胜塞尔维亚，夺得冠军！激动人心的比赛！女排精神，就是永！不！言！败！此刻，一起为中国姑娘喝彩！为郎平喝彩！" ></textarea>
+                </div>
+                <div class="form__button">
+                    <input id="btn_post" type="submit" class="btn btn-primary  btn-lg btn-radius" style="font-size:18px;margin-right:20px;" value="点击评估" onclick="check_txt()" />
+                </div>
+            </form>
+
+		</div>
+	</div>
+</div>
+</body>
+<script src="{% static 'long_fakenews_detection/js/jquery.js' %}"></script>
+<script src="{% static 'long_fakenews_detection/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript">
+function check_txt(){
+
+	var content = $.trim($("#news_content").val());
+
+	if(content == ""){
+	    $('#news_content').val($("#news_content").attr('placeholder'));
+	    content = $.trim($("#news_content").val());
+
+	}
+    // alert(content);
+	// 按钮不可用
+	$("#btn_post").attr("disabled",true);
+
+	// 使用ajax将请求发送到app上
+	$.ajax({
+		url:"/long_fakenews_detection/check_txt/",      //url
+		type: "POST",                //提交表单的类型，相当于method="post"
+		dataType: "json",            //dataType, 这个是请求后，返回的数据将以json格式显示
+		data:{
+			"content": content,
+		},                                //Data这个地方，必须要获取数据，代表将获取到的数据发送到后端，后端再进行处理
+		success:function(data){
+		    // alert("work")
+			// 数据库处理完之后返回一个id，需要自己在新页面查找该id
+			console.log(data);            //调试使用
+			//alert(data)
+
+			var list = eval(data);
+			//var rawtitle = list[0];
+			//var newtitle = list[1];
+			var txt_id = list[list.length-1];
+
+
+            // alert(txt_id);
+        	newurl = '/long_fakenews_detection/'+txt_id;
+			// alert(newurl)
+			// 拿到新的id，去新的界面渲染。
+			// 这个写法其实是不科学的，如果提交完表单需要跳转的话，直接用from标签不就好了？
+        	window.location.href = newurl;
+		},
+
+	});//注意标点符号
+}
+</script>
+</html>

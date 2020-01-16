@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'calligraphy/assets/img/favicon.ico' %}">
+
+    <title>书法生成</title>
+
+    <link href="{% static 'calligraphy/assets/css/bootstrap.css' %}" rel="stylesheet">
+ 	<link href="{% static 'calligraphy/assets/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'calligraphy/assets/js/jquery.min.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'calligraphy/assets/js/html5shiv.js' %}"></script>
+      <script src="{% static 'calligraphy/assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  	<div id="navbar-main">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/calligraphy"><h1 style="font-size:25px;font-family:'华文行楷';">书法生成</h1></a>
+					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
+						<i class="el-icon-lines"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse" id="main-navigation">
+					<ul class="nav navbar-nav">
+						<li><a href="/calligraphy" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">首页</a></li>
+						<li><a href="/calligraphy/history" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">检测历史</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div id="" name="home" class="" style="height: 100px; min-height: 200px;">
+		<header class="clearfix " >
+  		</header>
+    </div>
+
+	<!--  CONTENT WRAPPER -->
+	<div id="content-wrapper" style="width: 60%">
+
+<!--		<section class="container page-section">-->
+<!--			<div class="row white">-->
+<!--				<h1 class="fade-down centered section-title">检测结果</h1>-->
+<!--				<hr>-->
+<!--			</div>-->
+<!--		</section>-->
+
+		<section class="container page-section" style="width:90%;padding-top:50px;padding-bottom:10px">
+			<div class="row white">
+				<h1 class="fade-down centered section-title" style="font-size:25px;font-family:'华文行楷';">原文本</h1>
+			</div>
+
+			<div class="row white">
+                <p>{{history.content}}</p>
+			</div>
+
+		</section>
+
+		<section class="container page-section" style="width:90%;padding-top:20px;padding-bottom:10px">
+			<div class="row white">
+				<h1 class="fade-down centered section-title" style="font-size:25px;font-family:'华文行楷';">生成结果</h1>
+			</div>
+
+			<div class="row white" style="text-align: center;">
+<!--                <p>{{history.calligraphy}}</p>-->
+				{% if history.info == "couplet" %}
+					<!--<p>{{history.content}}</p>-->
+					<!--<p>{{history.calligraphy}}</p>-->
+
+					<!--<img src="../../{{history.calligraphy}}_1.jpg" width="100%" height="100%">-->
+					<!--<img src="../../{{history.calligraphy}}_2.jpg" width="100%" height="100%">-->
+					<img src="../../{{history.calligraphy}}" height="1000px">
+				{% else %}
+					<img src="../../{{history.calligraphy}}" width="100%" height="100%">
+				{% endif %}
+			</div>
+
+		</section>
+	</div>
+
+
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'calligraphy/assets/js/plugins.js' %}"></script>
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/init.js' %}"></script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			'use strict';
+			  jQuery('body').backstretch([
+				  // "{% static 'calligraphy/assets/img/bg/bg1.jpg' %}"
+				 "{% static 'calligraphy/assets/img/bg/bg2.jpg' %}"
+				, "{% static 'calligraphy/assets/img/bg/bg3.jpg' %}"
+			  ], {duration: 5000, fade: 500});
+			});
+
+	</script>
+  </body>
+</html>

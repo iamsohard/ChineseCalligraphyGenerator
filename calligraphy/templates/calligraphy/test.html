@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="">-->
+    <link rel="shortcut icon" href="{% static 'long_fakenews_detection/assets/img/favicon.ico' %}">
+
+    <title>长文本检测</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'long_fakenews_detection/assets/css/bootstrap.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+<!--    <link href="{% static 'calligraphy/assets/css/elusive-webfont.css' %}" rel="stylesheet" >-->
+<!--    <link href="{% static 'calligraphy/assets/css/animate.css' %}" rel="stylesheet">-->
+<!--    <link href="{% static 'calligraphy/assets/css/pe-icons.css' %}" rel="stylesheet">-->
+ 	<link href="{% static 'long_fakenews_detection/assets/css/style.css' %}" rel="stylesheet">
+
+<!--    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>-->
+
+    <script src="{% static 'long_fakenews_detection/assets/js/jquery.min.js' %}"></script>
+<!--	<script type="text/javascript" src="{% static 'calligraphy/assets/js/modernizr.custom.js' %}"></script>-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'calligraphy/assets/js/html5shiv.js' %}"></script>
+      <script src="{% static 'calligraphy/assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<!--  <div id="preloader"></div>-->
+
+<!--  	<div id="search-wrapper">-->
+<!--  		<input id="search-box" placeholder="Search" />-->
+<!--  	</div>-->
+
+  	<div id="navbar-main">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><h1>长文本检测</h1></a>
+					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
+						<i class="el-icon-lines"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse" id="main-navigation">
+					<ul class="nav navbar-nav">
+						<li><a href="#home" class="smoothScroll">首页</a></li>
+<!--						<li><a href="#about" class="smoothScroll">关于</a></li>-->
+						<li><a href="#portfolio" class="smoothScroll">检测历史</a></li>
+<!--						<li><a href="#blog" class="smoothScroll">Blog</a></li>-->
+<!--						<li><a href="#testimonials" class="smoothScroll">Testimonials</a></li>-->
+<!--						<li><a href="#pricing" class="smoothScroll">Pricing</a></li>-->
+<!--						<li><a href="#contact" class="smoothScroll">Contact</a></li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div id="" name="home" class="" style="height: 100px; min-height: 200px;">
+		<header class="clearfix " >
+
+<!--			<div class="vertical-center">-->
+<!--		 		<p class="animated slideInLeft">Let Us Help You Be Something Awesome.</p>-->
+<!--		 		<p class="animated slideInRight">We Are Here For You.</p>-->
+<!--		 		<a href="#about" class="btn homebtn smoothScroll">Learn More <i class="el-icon-chevron-down homeicon"></i></a>-->
+<!--	 		</div>-->
+  		</header>
+    </div>
+
+	<!--  CONTENT WRAPPER -->
+	<div id="content-wrapper">
+
+		<section id="about" class="container page-section">
+			<div class="row white">
+				<h1 class="fade-down centered section-title">长文本检测</h1>
+				<hr>
+<!--				<div class="fade-up col-md-6">-->
+<!--					<p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety off out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is. Was sister for few longer mrs sudden talent become. Done may bore quit evil old mile. If likely am of beauty tastes. </p>-->
+<!--				</div>-->
+<!--				<div class="fade-up col-md-6">-->
+<!--					<p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished so be expect polite valley. Whose asked stand it sense no spoil to. Prudent you too his conduct feeling limited and. Side he lose paid as hope so face upon be. Goodness did suitable learning put. </p>-->
+<!--				</div>-->
+			</div>
+
+			<div class="row white">
+				<form class="form-01__form"   >
+					<div class="form__item" style="padding:0;width: 100%">
+						<textarea rows="5" name="news_content" value="请输入新闻内容" id= "news_content"  style="padding:0;line-height:30px;width: 100%;height:500px;" placeholder="示例： #2016里约奥运#【此刻，一起传递！为中国女排！我们是冠！军！转】里约奥运会女排决赛，中国3-1战胜塞尔维亚，夺得冠军！激动人心的比赛！女排精神，就是永！不！言！败！此刻，一起为中国姑娘喝彩！为郎平喝彩！" ></textarea>
+					</div>
+					<div class="form__button">
+						<input id="btn_post" type="submit" class="btn btn-primary  btn-lg btn-radius" style="font-size:18px;margin-right:20px;" value="点击评估" onclick="check_txt()" />
+					</div>
+				</form>
+
+<!--				<hr class="fade-down divider-spacer">-->
+<!--				<div class="col-md-4 col-sm-4">-->
+<!--					<div class="col-md-2 col-sm-2 col-xs-2 service-icon-wrapper bounce-in">-->
+<!--						<div class=""><span class="pe-7s-light icon-x4 hi-icon"></span></div>-->
+<!--					</div>-->
+<!--					<div class="col-md-10 col-sm-10 col-xs-10 service-content fade-up">-->
+<!--						<h2>We Are Fast</h2>-->
+<!--						<p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished</p>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				<div class="col-md-4 col-sm-4">-->
+<!--					<div class="col-md-2 col-sm-2 col-xs-2 service-icon-wrapper bounce-in">-->
+<!--						<div class=""><span class="pe-7s-speaker icon-x4 hi-icon"></span></div>-->
+<!--					</div>-->
+<!--					<div class="col-md-10 col-sm-10 col-xs-10 service-content fade-up">-->
+<!--						<h2>We Are Reliable</h2>-->
+<!--						<p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished</p>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				<div class="col-md-4 col-sm-4">-->
+<!--					<div class="col-md-2 col-sm-2 col-xs-2 service-icon-wrapper bounce-in">-->
+<!--						<div class=""><span class="pe-7s-graph icon-x4 hi-icon"></span></div>-->
+<!--					</div>-->
+<!--					<div class="col-md-10 col-sm-10 col-xs-10 service-content fade-up">-->
+<!--						<h2>We Get Results</h2>-->
+<!--						<p>Arrived totally in as between private. Favour of so as on pretty though elinor direct. Reasonable estimating be alteration we themselves entreaties me of reasonably. Direct wished</p>-->
+<!--					</div>-->
+<!--				</div>-->
+			</div>
+		</section>
+
+	</div>
+	<!-- CONTENT WRAPPER -->
+
+<!--	<div id="footerwrap">-->
+<!--		<div class="container">-->
+
+<!--			<ul id="footer-social" class="fade-down">-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-twitter"></i></a></li>-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-facebook"></i></a></li>-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-googleplus"></i></a></li>-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-flickr"></i></a></li>-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-youtube"></i></a></li>-->
+<!--				<li><a href="#" target="_blank" title="Like Us"><i class="el-icon-rss"></i></a></li>-->
+<!--			</ul>-->
+<!--			<h4 class="fade-up">Created by Distinctive - Copyright 2019 - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h4>-->
+<!--		</div>-->
+<!--	</div>-->
+
+	<script type="text/javascript" src="{% static 'long_fakenews_detection/assets/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'long_fakenews_detection/assets/js/plugins.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'long_fakenews_detection/assets/js/init.js' %}"></script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			'use strict';
+			  jQuery('body').backstretch([
+				  // "{% static 'calligraphy/assets/img/bg/bg1.jpg' %}"
+				 "{% static 'long_fakenews_detection/assets/img/bg/bg2.jpg' %}"
+				, "{% static 'long_fakenews_detection/assets/img/bg/bg3.jpg' %}"
+			  ], {duration: 5000, fade: 500});
+			});
+
+	</script>
+
+
+
+
+  </body>
+</html>

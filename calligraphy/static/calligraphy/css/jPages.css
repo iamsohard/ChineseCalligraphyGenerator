@@ -1,0 +1,122 @@
+.holder {
+	margin: 15px 0;
+}
+.holder a {
+	font-size: 12px;
+	cursor: pointer;
+	margin: 0 5px;
+	color: #333;
+}
+.holder a:hover {
+	background-color: #222;
+	color: #fff;
+}
+.holder a.jp-previous {
+	margin-right: 15px;
+}
+.holder a.jp-next {
+	margin-left: 15px;
+}
+.holder a.jp-current, a.jp-current:hover {
+	color: #FF4242;
+	font-weight: bold;
+}
+.holder a.jp-disabled, a.jp-disabled:hover {
+	color: #bbb;
+}
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+	cursor: default;
+	background: none;
+}
+.holder span {
+	margin: 0 5px;
+}
+.btn-radius {
+	border-radius: 30px !important;
+}
+.btn {
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border-radius: 2px;
+	padding: 13px 28px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+    text-transform: uppercase;
+	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+	height: 26px;
+	line-height: 24px
+}
+.btn-sm {
+	font-size: 11px;
+	font-weight: 600;
+	padding: 11px 25px;
+}
+.btn-lg {
+	padding: 0px 50px;
+}
+.btn-xs {
+	padding: 1px 15px;
+}
+.btn-info {
+    color: #fff;
+    background-color: #31708f;
+    border-color: #2a617c;
+}
+
+.btn-success{
+    background: #05ac50;
+    background: linear-gradient(135deg, #05ac50 0%,#21dd72 50%,#05c44e 51%,#05ac50 71%,#05ac50 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05ac50', endColorstr='#05ac50',GradientType=1 );
+    background-size: 400% 400%;
+    animation: AnimationName 3s ease infinite;
+
+    border: medium none;
+}
+.btn-danger{
+    background: #e81216;
+    background: linear-gradient(135deg, #e81216 0%,#f45355 50%,#f6290c 51%,#ed0e11 71%,#fc1b21 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e81216', endColorstr='#fc1b21',GradientType=1 );
+    background-size: 400% 400%;
+    animation: AnimationName 3s ease infinite;
+
+    border: medium none;
+}
+.btn-primary{
+    background: #e5ae09;
+    background: -moz-linear-gradient(-45deg, #e5ae09 0%, #ffd044 50%, #ffc107 51%, #fc9014 71%, #f1890b 100%);
+    background: -webkit-linear-gradient(-45deg, #e5ae09 0%,#ffd044 50%,#ffc107 51%,#fc9014 71%,#f1890b 100%);
+    background: linear-gradient(135deg, #e5ae09 0%,#ffd044 50%,#ffc107 51%,#fc9014 71%,#f1890b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5ae09', endColorstr='#f1890b',GradientType=1 );
+    background-size: 400% 400%;
+    animation: AnimationName 3s ease infinite;
+
+    border: medium none;
+    color: #fff !important;
+}
+.btn-info {
+    background: #5a7ce2;
+    background: linear-gradient(135deg, #5a7ce2 0%,#8283e8 50%,#5c5de8 51%,#565bd8 71%,#575cdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a7ce2', endColorstr='#575cdb',GradientType=1 );
+    background-size: 400% 400%;
+    animation: AnimationName 3s ease infinite;
+    border: medium none;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{        background-position:0% 31%    }
+    50%{        background-position:100% 70%    }
+    100%{        background-position:0% 31%    }
+}
+@-moz-keyframes AnimationName {
+    0%{        background-position:0% 31%    }
+    50%{        background-position:100% 70%    }
+    100%{        background-position:0% 31%    }
+}
+@keyframes AnimationName {
+    0%{        background-position:0% 31%    }
+    50%{        background-position:100% 70%    }
+    100%{        background-position:0% 31%    }
+}
+
+#tbl_evallist td{padding:5px;vertical-align: middle}
