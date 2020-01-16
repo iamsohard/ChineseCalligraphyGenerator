@@ -52,4 +52,10 @@ Here are some system screenshots
 * [dc-gan](https://github.com/carpedm20/DCGAN-tensorflow) by [carpedm20](https://github.com/carpedm20)
 * [origianl pix2pix torch code](https://github.com/phillipi/pix2pix) by [phillipi](https://github.com/phillipi)
 
-我太难了
+Isola P, Zhu J, Zhou T, et al. Image-to-Image Translation with Conditional Adversarial Networks[C]. computer vision and pattern recognition, 2017: 5967-5976.
+
+Odena A, Olah C, Shlens J, et al. Conditional Image Synthesis With Auxiliary Classifier GANs[J]. arXiv: Machine Learning, 2016.
+
+Taigman Y, Polyak A, Wolf L, et al. Unsupervised Cross-Domain Image Generation[J]. arXiv: Computer Vision and Pattern Recognition, 2016.
+
+iamsohard
