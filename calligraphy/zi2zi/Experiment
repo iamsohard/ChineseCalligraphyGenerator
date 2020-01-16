@@ -1,0 +1,43 @@
+1.PreTraining->BaoMH
+2.KaiT->SongT£, 200epochs
+3.BaoMH->TongQ£, 100epochs
+4.PreTraining->KaiT
+5.Train BigModel with 30 Fonts
+6.Fine-tune BigModel with BaoMH(3000) and TongQ(775)
+7.Test4TrainOn775
+
+Category Number:
+0.FangS
+1.BaiBXZ
+2.BangSX
+3.BaoMH
+4.BiLJ
+5.ChunFSLH
+6.DengX(Broke)
+7.DengXMB
+8.FengGWY
+9.GaoBQS
+10.HuaKBA(Broke)
+11.JingL
+12.KaiT
+13.LiangL
+14.LiXKMH
+15.MaoLGM
+16.MiaoWT
+17.MiNJXK
+18.MoBS
+19.PinSH
+20.QiDXK
+21.QingCJY
+22.ShuS
+23.TongQ
+24.XingTCS
+25.YangTT
+26.YaoT
+27.YouMZ
+28.YuN
+29.ZaoZGFYY
+30.ZiYHX
+31.FangZXDXJT
+32.ShiSZHJT
+33.YuWYBCGT
