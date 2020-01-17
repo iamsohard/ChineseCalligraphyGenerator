@@ -8,6 +8,8 @@
 ## overview
 Picture Style-Transfer is a tough problem in Computer Vision, which attracts lots attention in the recent decade. Different with the previous Style-Transfer for scenery pictures, we focus more on the Style-Transfer for Chinese Calligraphy.
 
+URL:http://holer.cc:50378/calligraphy/
+
 ![alt network](assets/demo1.jpg)
 ## OurCalligraphy
 To solve the problem probably, we design a GAN-based model, which consists of two parts, a U-Net based Generator and a CNN-based Discriminator. 
